@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Orbitron", serif;
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+.navItem {
+  @apply text-sm;
+  border: 1px solid transparent;
+  padding-bottom: 5px;
+}
+.navItem:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.border-large {
+  border-top: 6px solid black;
+  border-right: 6px solid black;
+  border-top-right-radius: 20px;
+}
+.border-small {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-top-right-radius: 20px;
+}
+.border-small-bottom-right {
+  border-bottom: 1px solid #666;
+  border-right: 1px solid #666;
+  border-bottom-right-radius: 20px;
+}
+
+.page-heading-container {
+  @apply flex flex-col md:flex-row border-large justify-between items-center gap-10;
+  padding: 18px;
+}
+.page-heading {
+  @apply text-left font-[900] text-[38px];
+}
+
+.black-button {
+  @apply bg-black rounded-lg py-4 px-7 text-white font-[sans-serif];
+}
+
+.player-card-container {
+  @apply border-small min-w-[307px] max-w-[307px];
+}
+.car-card-container {
+  @apply border-small min-w-[461px] max-w-[461px];
+}
